@@ -18,7 +18,7 @@ locals {
 resource "azurerm_network_security_group" "vnet_nsg" {
   for_each            = local.nsg_configs
   name                = each.value.name
-  location            = data.azurerm_resource_group.rg.location
+  location            = var.location
   resource_group_name = data.azurerm_resource_group.rg.name
 
   # Management Traffic: SSH strictly from trusted admin/Bastion CIDR

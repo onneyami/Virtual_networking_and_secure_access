@@ -1,6 +1,6 @@
 # Reference the regional Network Watcher auto-provisioned by Azure
 data "azurerm_network_watcher" "regional" {
-  name                = "NetworkWatcher_${data.azurerm_resource_group.rg.location}"
+  name                = "NetworkWatcher_${var.location}"
   resource_group_name = "NetworkWatcherRG"
 }
 

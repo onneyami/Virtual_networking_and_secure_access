@@ -16,7 +16,7 @@ locals {
 resource "azurerm_network_interface" "vm_nic" {
   for_each            = local.vm_configs
   name                = each.value.nic_name
-  location            = data.azurerm_resource_group.rg.location
+  location            = var.location
   resource_group_name = data.azurerm_resource_group.rg.name
 
   ip_configuration {
@@ -31,7 +31,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
   for_each                        = local.vm_configs
   name                            = each.value.vm_name
   resource_group_name             = data.azurerm_resource_group.rg.name
-  location                        = data.azurerm_resource_group.rg.location
+  location                        = var.location
   size                            = "Standard_B1s"
   admin_username                  = var.admin_username
   disable_password_authentication = true
