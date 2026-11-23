@@ -29,7 +29,7 @@ resource "azurerm_network_connection_monitor" "peering_monitor" {
     test_frequency_in_seconds = 60
 
     tcp_configuration {
-      port               = 8080
+      port                = 8080
       trace_route_enabled = true
     }
 

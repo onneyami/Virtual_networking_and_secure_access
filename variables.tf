@@ -18,7 +18,7 @@ variable "public_key_path" {
 }
 
 variable "admin_username" {
-    description = "Admin username for the Linux VMs"
-    type = string
-    default = "azureuser"
+  description = "Admin username for the Linux VMs"
+  type        = string
+  default     = "azureuser"
 }
