@@ -10,3 +10,15 @@ variable "admin_source_cidr" {
   type        = string
   default     = "10.10.2.0/26"
 }
+
+variable "public_key_path" {
+  description = "Path to public SSH key"
+  type        = string
+  default     = "~/.ssh/id_rsa.pub"
+}
+
+variable "admin_username" {
+    description = "Admin username for the Linux VMs"
+    type = string
+    default = "azureuser"
+}
