@@ -26,5 +26,5 @@ variable "admin_username" {
 variable "location" {
   description = "Azure region permitted by Policy_allowerd_locations"
   type        = string
-  default     = "weasteurope"
+  default     = "westeurope"
 }
