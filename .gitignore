@@ -4,6 +4,8 @@
 crash.log
 crash.*.log
 
+tfplan
+
 # Ignore local override files
 override.tf
 override.tf.json
